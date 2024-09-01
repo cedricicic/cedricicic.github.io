@@ -1,0 +1,250 @@
+/* font setting + default margin + padding  */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.intro {
+    max-width: 50%;
+    animation: slideInLeft 1s ease-out;
+}
+
+
+.school-name {
+    color: #ffcc00; 
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+    height: 3rem;
+    background-color: #fff; /*white background */
+    border-radius: 50%; /* Rounded icons */
+    padding: 0.5rem; /* Space between icon and background */
+    box-shadow: 10px 5px 5px rgb(29, 29, 29);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+}
+
+.icon:hover {
+    transform: scale(1.1); 
+    box-shadow: 10px 5px 5px rgb(29, 29, 29);
+}
+
+.resume-button {
+    background-color: #ffcc00; 
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; 
+    margin-left: 1rem; /* Space between the icons and the resume button */
+}
+
+.resume-button:hover {
+    transform: scale(1.1); 
+    background-color: #e6b800; /* Darker shade on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); 
+}
+
+.profile-picture img {
+    height: 150px;
+    width: auto; 
+    border-radius: 10px; /* alt 50% for circular */
+    animation: slideInRight 1s ease-out;
+}
+
+.about-me {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.articles {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+}
+
+.articles h2 {
+    text-align: center;
+    color: #333;
+}
+
+.articles article {
+    margin-bottom: 20px;
+}
+
+.articles h3 a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.articles h3 a:hover {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+.contact button[type="submit"] {
+    background-color: #ffcc00; 
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact button[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: #e6b800; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+}
+     
+/* Text Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.intro h1 {
+    animation: fadeIn 2s ease-out; 
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* modal for the resume */
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; 
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
