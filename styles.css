@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    /*background-image: url('pixels.png');*/
 }
 
 header {
@@ -13,6 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    background-image: url('/images/grass.png');
 }
 
 .intro {
@@ -75,7 +77,7 @@ header {
 }
 
 .profile-picture img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.4); 
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); 
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; 
 }
