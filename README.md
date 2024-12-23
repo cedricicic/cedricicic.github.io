@@ -1,2 +1,0 @@
-# cedricicic.github.io
-website
